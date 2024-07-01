@@ -1,0 +1,9 @@
+minikube start
+minikube status
+kubectl run my-nginx-pod --image=nginx
+kubectl get pods
+kubectl describe pod my-nginx-pod
+kubectl create deployment my-nginx-deploy --image=nginx
+kubectl scale deploy my-nginx-deploy --replicas=3
+kubectl expose deploy my-nginx-deploy --port=8080 --target-port=80
+kubectl expose deploy my-nginx-deploy --type=NodePort --port=8888 --target-port=80
